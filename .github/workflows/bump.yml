@@ -21,9 +21,9 @@ jobs:
       - name: Configure git
         uses: Homebrew/actions/git-user-config@main
 
-      - name: Install system dependencies
+      - name: Install dependencies
         run: |
-          sudo apt install libgudev-1.0-0 pkg-config llvm cargo
+          brew install llvm pkg-config rust libgudev
 
       - name: Bump packages
         env:
