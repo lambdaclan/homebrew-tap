@@ -23,7 +23,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          brew install llvm pkgconf rust libgudev
+          brew install llvm pkg-config rust libgudev
+          brew link pkg-config
 
       - name: Bump packages
         env:
