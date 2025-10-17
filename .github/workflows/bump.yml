@@ -24,11 +24,11 @@ jobs:
       - name: Install dependencies
         run: |
           brew install llvm pkg-config rust libgudev
-          brew link pkg-config
 
       - name: Bump packages
         env:
           HOMEBREW_DEVELOPER: 1
           HOMEBREW_GITHUB_API_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PKG_CONFIG_PATH: "$HOMEBREW_PREFIX/lib/pkgconfig"
         run: |
           brew bump --tap ${{ github.repository }} --open-pr --no-fork
