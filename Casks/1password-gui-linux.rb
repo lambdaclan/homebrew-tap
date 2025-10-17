@@ -67,7 +67,8 @@ cask "1password-gui-linux" do
              "/etc/polkit-1/actions/com.1password.1Password.policy"
       puts "Installed /etc/polkit-1/actions/com.1password.1Password.policy"
     else
-      puts "Skipping installation of /etc/polkit-1/actions/com.1password.1Password.policy, as it already exists and the same as the version to be installed."
+      puts "Skipping installation of /etc/polkit-1/actions/com.1password.1Password.policy, as" \
+           "it already exists and the same as the version to be installed."
     end
 
     system "echo", "Installing flatpak browser integratrion using https://github.com/FlyinPancake/1password-flatpak-browser-integration"
@@ -83,7 +84,8 @@ cask "1password-gui-linux" do
 
     system "#{staged_path}/1password-flatpak-browser-integration.sh"
 
-    ohai "If you need to integrate with flatpak browsers, you need to install the `1password-flatpak-integrations` cask."
+    ohai "If you need to integrate with flatpak browsers, you need to" \
+         "install the `1password-flatpak-integrations` cask."
 
     File.write("#{staged_path}/1password-uninstall.sh", <<~EOS
       #!/bin/bash
