@@ -24,6 +24,7 @@ jobs:
       - name: Install dependencies
         run: |
           brew install llvm pkg-config rust libgudev
+          sudo apt install pkgconf-bin -y
           echo $(which pkg-config)
 
       - name: Bump packages
