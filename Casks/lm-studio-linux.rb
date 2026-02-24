@@ -1,6 +1,6 @@
 cask "lm-studio-linux" do
-  version "0.4.1-1"
-  sha256 "d18e178cadef7d6798f19e6d41f33a297e26a1d285091cbc30da8252d18a46f0"
+  version "0.4.4-1"
+  sha256 "2b8d8fe478186f2f5fb147dcfc3b0510e4a78287d2de41cc706d9a9f55502406"
 
   url "https://installers.lmstudio.ai/linux/x64/#{version}/LM-Studio-#{version}-x64.AppImage"
   name "LM Studio"
